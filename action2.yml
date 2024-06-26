@@ -1,0 +1,29 @@
+name: comment ChatGPT algorithm code review
+
+jobs:
+  GPT-algorithm-code-review:
+    steps:
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.11.9"
+
+      - name: Checkout BaekjoonHub repository
+        uses: actions/checkout@v4
+
+      - name: get diff
+        run: |
+          ls
+          git diff HEAD^ HEAD > latest_commit_diff.txt
+          cat latest_commit_diff.txt
+
+      - name: Checkout this repository
+        uses: actions/checkout@v4
+        with:
+          repository: choam2426/GPT-algorithm-code-review
+          path: review
+          ref: main
+
+      - name: test
+        run: |
+          ls
