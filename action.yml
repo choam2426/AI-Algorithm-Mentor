@@ -2,8 +2,6 @@ name: comment ChatGPT algorithm code review
 
 jobs:
   GPT-algorithm-code-review:
-    runs-on: ubuntu-22.04
-
     steps:
       - name: Set up Python
         uses: actions/setup-python@v3
