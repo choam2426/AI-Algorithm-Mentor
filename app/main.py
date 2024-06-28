@@ -7,3 +7,5 @@ print(GITHUB_TOKEN)
 print(OPENAI_KEY)
 
 print(MODEL)
+
+print(COMMIT_SHA)
