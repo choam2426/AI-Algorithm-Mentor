@@ -18,3 +18,4 @@ runs:
     GITHUB_TOKEN: ${{ inputs.GITHUB_TOKEN }}
     OPENAI_API_KEY: ${{ inputs.OPENAI_API_KEY }}
     MODEL: ${{ inputs.MODEL }}
+    COMMIT_SHA: ${{ github.sha}}
