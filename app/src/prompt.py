@@ -11,8 +11,8 @@ Instructions: A markdown file and source code are provided, with the problem des
 def get_prompt(diffs: dict) -> list:
     for filename, diff in diffs.items():
         if ".md" in filename:
-            prompt[1]["content"] += f"README.md : {diff}"
+            prompt[1]["content"] += f"README.md : {diff}\n"
         else:
-            prompt[1]["content"] += f"code : {diff}"
+            prompt[1]["content"] += f"code : {diff}\n"
 
     return prompt
