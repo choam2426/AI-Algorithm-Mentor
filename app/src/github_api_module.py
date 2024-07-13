@@ -34,3 +34,4 @@ def write_comment_in_commit(repository: str, commit_sha: str, token: str, commen
     data = {"body": comment}
 
     response = requests.post(url, headers=headers, data=json.dumps(data))
+    print(response)
