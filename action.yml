@@ -8,9 +8,6 @@ inputs:
   OPENAI_API_KEY:
     description: "openai api key"
     required: true
-  MODEL:
-    description: "openai api model"
-    default: "gpt-4o"
   COMMIT_SHA:
     description: "latest commit sha"
     required: true
@@ -20,5 +17,4 @@ runs:
   env:
     GITHUB_TOKEN: ${{ inputs.GITHUB_TOKEN }}
     OPENAI_API_KEY: ${{ inputs.OPENAI_API_KEY }}
-    MODEL: ${{ inputs.MODEL }}
     COMMIT_SHA: ${{ inputs.COMMIT_SHA}}

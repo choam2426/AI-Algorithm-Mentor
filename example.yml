@@ -1,0 +1,17 @@
+name: algorithm review
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  write ai comment:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: choam2426/GPT-algorithm-code-review@main
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          COMMIT_SHA: ${{ github.sha }}
