@@ -13,7 +13,7 @@ def get_commit_data(repository: str, commit_sha: str, token: str) -> dict:
     diffs = {}
     if response.status_code == 200:
         commit_data = response.json()
-
+        print(commit_data)
         files = commit_data["files"]
         for file in files:
             filename = file["filename"]
