@@ -1,5 +1,6 @@
-from src.consts import *
-from src.use_github_api import get_commit_data
+from src import *
 
 if __name__ == "__main__":
-    get_commit_data(GITHUB_REPOSITORY, COMMIT_SHA, GITHUB_TOKEN)
+    diffs = get_commit_data(GITHUB_REPOSITORY, COMMIT_SHA, GITHUB_TOKEN)
+
+    llm_response = get_code_review_by_openai(api_key=OPENAI_API_KEY, diffs=diffs)
