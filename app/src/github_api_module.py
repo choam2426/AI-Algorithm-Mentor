@@ -27,11 +27,8 @@ def get_commit_data(repository: str, commit_sha: str, token: str) -> dict:
 
 def write_comment_in_commit(repository: str, commit_sha: str, token: str, comment: str) -> None:
     url = f"https://api.github.com/repos/{repository}/commits/{commit_sha}/comments"
-    headers = {
-        "Authorization": f"token {token}",
-        "Content-Type": "application/json",
-    }
+    headers = {"Authorization": f"token {token}", "Accept": "application/vnd.github.v3+json"}
     data = {"body": comment}
 
     response = requests.post(url, headers=headers, data=json.dumps(data))
-    print(response)
+    print(response.json())
