@@ -6,6 +6,7 @@ def get_commit_data(repository: str, commit_sha: str, token: str) -> str:
 
     headers = {
         "Authorization": f"token {token}",
+        "Accept": "application/vnd.github.v3.json",
     }
 
     response = requests.get(url, headers=headers)
