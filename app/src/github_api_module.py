@@ -17,7 +17,7 @@ def get_commit_data(repository: str, commit_sha: str, token: str) -> dict:
         files = commit_data["files"]
         for file in files:
             filename = file["filename"]
-            diff = file["changes"]
+            diff = file["patch"]
             diffs[filename] = diff
         return diffs
     else:
