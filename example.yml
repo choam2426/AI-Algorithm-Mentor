@@ -1,11 +1,11 @@
-name: algorithm review
+name: gpt algorithm mentor
 
 on:
   push:
     branches: [ "main" ]
 
 jobs:
-  write ai comment:
+  write comment:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -15,3 +15,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           COMMIT_SHA: ${{ github.sha }}
+          LANGUAGE: ENGLISH # 응답 언어를 지정하세요

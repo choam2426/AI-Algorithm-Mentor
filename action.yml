@@ -1,5 +1,5 @@
-name: "ChatGPT Algorithm Mentor"
-description: "algorithm code review using ChatGPT"
+name: "GPT Algorithm Mentor"
+description: "algorithm code review using GPT"
 author: "choam2426"
 inputs:
   GITHUB_TOKEN:
@@ -23,4 +23,3 @@ runs:
     OPENAI_API_KEY: ${{ inputs.OPENAI_API_KEY }}
     COMMIT_SHA: ${{ inputs.COMMIT_SHA }}
     LANGUAGE: ${{ inputs.LANGUAGE }}
-    

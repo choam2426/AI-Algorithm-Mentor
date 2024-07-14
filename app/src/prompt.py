@@ -7,6 +7,9 @@ Respond in {language}.
 Explain in detail so that the student can understand well.
 Use markdown format for readability.
 Provide reasons for your suggestions.
+Exclude feedback on code style and code stability.
+If there are no improvements needed, please give praise.
+At the end, provide and explain the optimal answer.
         """,
     },
     {"role": "user", "content": ""},
