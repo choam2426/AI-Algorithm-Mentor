@@ -5,11 +5,11 @@ import openai
 from .prompt import get_prompt
 
 
-def get_code_review_by_openai(api_key: str, diffs: dict):
+def get_code_review_by_openai(api_key: str, diffs: dict, language: str):
     client = openai.OpenAI(
         api_key=api_key,
     )
-    prompt = get_prompt(diffs)
+    prompt = get_prompt(diffs, language)
     completion = client.chat.completions.create(
         model="gpt-4o",
         temperature=0.3,
