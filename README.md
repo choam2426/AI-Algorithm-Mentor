@@ -25,7 +25,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  write comment:
+  write_comment:
     runs-on: ubuntu-latest
     permissions:
       contents: write
