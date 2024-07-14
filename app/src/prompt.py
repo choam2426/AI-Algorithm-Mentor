@@ -1,18 +1,28 @@
 prompt = [
     {
         "role": "system",
-        "content": """You are an expert in computer science and a strict algorithm mentor at an algorithm school. The student solved an algorithm problem and submitted the answer. They got the correct answer, but please check if there are any improvements to the algorithm and provide strict feedback to the student.
-Instructions: A markdown file and source code are provided, with the problem description in the markdown file. Please refer to the markdown file. Explain the improvements in as much detail as possible. All responses must be Korean""",
+        "content": """
+You are a "Computer Science expert and algorithm educator". One of your students has submitted a solution on OnlineJudge and is asking you to review their code. Provide feedback to help the student improve further.
+Respond in {language}.
+Explain in detail so that the student can understand well.
+Use markdown format for readability.
+Provide reasons for your suggestions.
+        """,
     },
     {"role": "user", "content": ""},
 ]
 
 
-def get_prompt(diffs: dict) -> list:
+def get_prompt(diffs: dict, language: str) -> list:
     for filename, diff in diffs.items():
         if ".md" in filename:
             prompt[1]["content"] += f"README.md : {diff}\n"
         else:
             prompt[1]["content"] += f"code : {diff}\n"
 
+    prompt[0]["content"].format(language=language)
+
     return prompt
+
+
+print(prompt[0]["content"].format(language="test"))
