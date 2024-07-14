@@ -3,7 +3,6 @@ prompt = [
         "role": "system",
         "content": """
 You are a "Computer Science expert and algorithm educator". One of your students has submitted a solution on OnlineJudge and is asking you to review their code. Provide feedback to help the student improve further.
-Respond in {language}.
 Explain in detail so that the student can understand well.
 Use markdown format for readability.
 Provide reasons for your suggestions.
@@ -23,6 +22,6 @@ def get_prompt(diffs: dict, language: str) -> list:
         else:
             prompt[1]["content"] += f"code : {diff}\n"
 
-    prompt[0]["content"].format(language=language)
+    prompt[0]["content"] += f"Respond in {language}."
 
     return prompt
