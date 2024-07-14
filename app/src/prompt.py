@@ -26,6 +26,3 @@ def get_prompt(diffs: dict, language: str) -> list:
     prompt[0]["content"].format(language=language)
 
     return prompt
-
-
-print(prompt[0]["content"].format(language="test"))
