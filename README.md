@@ -8,11 +8,11 @@
 ![예시](https://github.com/user-attachments/assets/d56d1bb5-d765-4178-9c82-ebf9b585705b)
 
 ## 사용 방법
-본 프로젝트는 크롬 익스텐션 [<U>백준 허브</U>](https://github.com/BaekjoonHub/BaekjoonHub) 사용을 전재로 만들어졌습니다. **백준 허브** 사용을 권장합니다.  
+본 프로젝트는 크롬 익스텐션 [<U>백준 허브</U>](https://github.com/BaekjoonHub/BaekjoonHub) 사용을 전제로 만들어졌습니다. **백준 허브** 사용을 권장합니다.  
 아래 내용은 모두 **백준 허브**를 연동한 github repository에서 이루어집니다.
 
 ### 1. OPENAI API Key 등록하기
-[<U>OPENAI API</U>](https://openai.com/index/openai-api/)에서 API 사용을 위한 KEY를 생성하고 credit을 결제합니다. (한문제 당 0.01$ 내외로 비용이 사용됩니다.)  
+[<U>OPENAI API</U>](https://openai.com/index/openai-api/)에서 API 사용을 위한 KEY를 생성하고 credit을 결제합니다. (한 문제 당 0.01$ 내외로 비용이 사용됩니다.)  
 생성한 키를 **백준 허브**와 연동한 repository에 "**OPENAI_API_KEY**"를 이름으로 secrets에 등록합니다.
 
 ### 2. github action 등록하기
