@@ -5,10 +5,13 @@
 **본 프로젝트는 오픈 소스 프로젝트로 많은 참여와 조언을 환영합니다.**
 
 ## 사용 결과
-![예시](https://github.com/user-attachments/assets/d56d1bb5-d765-4178-9c82-ebf9b585705b)
+[피드백의 좋은 예시](https://github.com/choam2426/OnlineJudge/commit/5ca611ffcf02bac0471db036a7af9f96c11f2b76#commitcomment-144449303)  
+위 코드 리뷰를 적용한 결과 메모리 및 시간을 크게 줄일 수 있는 방법을 알 수 있었습니다.  
+![](https://github.com/user-attachments/assets/5cbfd301-3ad4-4a42-82cc-02e99c145343)
 
 ## 사용 방법
 본 프로젝트는 크롬 익스텐션 [<U>백준 허브</U>](https://github.com/BaekjoonHub/BaekjoonHub) 사용을 전제로 만들어졌습니다. **백준 허브** 사용을 권장합니다.  
+(백준 허브는 문제 내용도 같이 올려줘서 더 좋은 피드백을 받을 수 있습니다.)  
 아래 내용은 모두 **백준 허브**를 연동한 github repository에서 이루어집니다.
 
 ### 1. OPENAI API Key 등록하기
