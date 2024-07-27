@@ -5,8 +5,8 @@
 **본 프로젝트는 오픈 소스 프로젝트로 많은 참여와 조언을 환영합니다.**
 
 ## 사용 결과
-[피드백의 좋은 예시](https://github.com/choam2426/OnlineJudge/commit/5ca611ffcf02bac0471db036a7af9f96c11f2b76#commitcomment-144449303)  
-위 코드 리뷰를 적용한 결과 메모리 및 시간을 크게 줄일 수 있는 방법을 알 수 있었습니다.  
+[피드백의 좋은 예시](https://github.com/choam2426/OnlineJudge/commit/1369f7b372dbf657f8d0a4aa071b80f41fc55e0d#commitcomment-144449276)  
+위 코드 리뷰를 적용한 결과 메모리 및 시간을 크게 줄이는 방법을 알 수 있었습니다.  
 ![](https://github.com/user-attachments/assets/5cbfd301-3ad4-4a42-82cc-02e99c145343)
 
 ## 사용 방법
@@ -33,14 +33,13 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: choam2426/GPT-algorithm-mentor@v1
+      - uses: choam2426/GPT-algorithm-code-review@v2
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }} # OPENAI API 크레딧 필요
           COMMIT_SHA: ${{ github.sha }}
-          LANGUAGE: ENGLISH # 응답 언어를 지정하세요
 ```
-LANGUAGE는 선택사항으로 with에 없으면 한국어로 지정됩니다.
+GITHUB_TOKEN은 따로 Secrets에 등록하지 않으셔도 됩니다.
 
 ### 3. 문제 풀기
 이제 문제를 풀고 백준 허브가 자동으로 push를 하면 해당 커밋에 comment가 생성됩니다.
