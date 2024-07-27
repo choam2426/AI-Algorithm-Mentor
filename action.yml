@@ -13,7 +13,7 @@ inputs:
     required: true
 runs:
   using: "docker"
-  image: "choam2426/chatgpt_algorithm_mentor:latest"
+  image: "docker://choam2426/chatgpt_algorithm_mentor:latest"
   env:
     GITHUB_TOKEN: ${{ inputs.GITHUB_TOKEN }}
     OPENAI_API_KEY: ${{ inputs.OPENAI_API_KEY }}
