@@ -1,5 +1,5 @@
-name: "GPT Algorithm Mentor"
-description: "algorithm code review using GPT"
+name: "chatGPT Algorithm Mentor"
+description: "algorithm code review using chatGPT"
 author: "choam2426"
 inputs:
   GITHUB_TOKEN:
@@ -11,15 +11,10 @@ inputs:
   COMMIT_SHA:
     description: "latest commit sha"
     required: true
-  LANGUAGE:
-    description: "mentor output language"
-    default: KOREAN
-    required: false
 runs:
   using: "docker"
-  image: "Dockerfile"
+  image: "choam2426/chatgpt_algorithm_mentor:latest"
   env:
     GITHUB_TOKEN: ${{ inputs.GITHUB_TOKEN }}
     OPENAI_API_KEY: ${{ inputs.OPENAI_API_KEY }}
     COMMIT_SHA: ${{ inputs.COMMIT_SHA }}
-    LANGUAGE: ${{ inputs.LANGUAGE }}

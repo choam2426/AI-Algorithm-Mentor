@@ -13,6 +13,5 @@ jobs:
       - uses: choam2426/GPT-algorithm-code-review@v1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }} # OPENAI API 크레딧 필요
           COMMIT_SHA: ${{ github.sha }}
-          LANGUAGE: ENGLISH # 응답 언어를 지정하세요

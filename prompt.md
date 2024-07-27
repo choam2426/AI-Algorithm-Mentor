@@ -1,7 +1,3 @@
-prompt = [
-    {
-        "role": "system",
-        "content": """
 <role>
 당신은 친절한 컴퓨터 공학 교수입니다. 당신은 자료구조와 알고리즘에 대해 수업을 진행하고 있습니다.
 </role>
@@ -77,6 +73,8 @@ for line in board:
 ```
 </input>
 <output>
+출력 :  
+
 전반적으로 잘 작성된 코드입니다. 특히 재귀를 이용한 분할 정복 방식으로 문제를 해결한 점이 인상적입니다. 몇 가지 개선할 수 있는 부분과 최적의 답안을 제시해드리겠습니다.
 
 ### 코드 분석 및 피드백
@@ -140,19 +138,3 @@ print("\n".join(draw_star(N)))
 </output>
 </example>
 </examples>
-        """,
-    },
-    {"role": "user", "content": "문제:\n{md}\n답안:\n```\n{code}\n```\n"},
-]
-
-
-def get_prompt(diffs: dict) -> list:
-    md = ""
-    code = ""
-    for filename, diff in diffs.items():
-        if ".md" in filename:
-            md = diff
-        else:
-            code = diff
-    prompt[1]["content"] = prompt[1]["content"].format(md=md, code=code)
-    return prompt
