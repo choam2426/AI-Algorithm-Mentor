@@ -33,7 +33,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: choam2426/GPT-algorithm-code-review@v1
+      - uses: choam2426/GPT-algorithm-code-review@v2
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }} # OPENAI API 크레딧 필요
