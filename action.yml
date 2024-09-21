@@ -8,16 +8,12 @@ inputs:
   OPENAI_API_KEY:
     description: "openai api key"
     required: true
-  COMMIT_SHA:
-    description: "latest commit sha"
-    required: true
 runs:
   using: "docker"
   image: "docker://choam2426/chatgpt_algorithm_mentor:latest"
   env:
     GITHUB_TOKEN: ${{ inputs.GITHUB_TOKEN }}
     OPENAI_API_KEY: ${{ inputs.OPENAI_API_KEY }}
-    COMMIT_SHA: ${{ inputs.COMMIT_SHA }}
 branding:
   icon: "check-circle"
   color: "blue"
