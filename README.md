@@ -35,7 +35,7 @@ jobs:
       - uses: choam2426/AI-Algorithm-Mentor@v3
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }} # OPENAI API 크레딧 
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }} # OPENAI API 크레딧 필요
 ```
 🚩 GITHUB_TOKEN은 따로 Secrets에 등록하지 않으셔도 됩니다.
 
