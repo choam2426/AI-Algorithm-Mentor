@@ -1,4 +1,4 @@
-# GPT-Algorithm-Mentor
+# AI-Algorithm-Mentor
 ### OPENAI의 언어 모델을 사용해서 알고리즘 문제에 대한 피드백을 제공합니다.
 백준, 프로그래머스 등을 통해 알고리즘 공부를 하시는 분들에게 도움을 주기 위해 만들었습니다.  
 코딩 테스트 준비, 알고리즘 공부 등 학습에 큰 도움을 줄 수 있습니다. **특히 독학을 하신다면...**  
@@ -20,7 +20,7 @@
 ### 2. github action 등록하기
 github action에 다음 workflow를 추가합니다.
 ```
-name: gpt algorithm mentor
+name: AI algorithm mentor
 
 on:
   push:
@@ -32,7 +32,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: choam2426/GPT-algorithm-code-review@v3
+      - uses: choam2426/AI-Algorithm-Mentor@v3
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }} # OPENAI API 크레딧 

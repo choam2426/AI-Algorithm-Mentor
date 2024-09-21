@@ -1,4 +1,4 @@
-name: gpt algorithm mentor
+name: AI algorithm mentor
 
 on:
   push:
@@ -10,7 +10,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: choam2426/GPT-algorithm-code-review@v3
+      - uses: choam2426/AI-Algorithm-Mentor@v3
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }} # OPENAI API 크레딧 필요
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }} # OPENAI API 크레딧 
